@@ -1,3 +1,5 @@
+# TODO: Add nfs volume
+
 image:
   repository: everpeace/kube-openmpi
   tag: 0.7.0
@@ -23,7 +25,7 @@ mpiMaster:
   #   runAsUser: 1000
   #   fsGroup: 1000
   # oneShot:
-  # If oneShot.enabled=true, mater automatically runs oneShot.command and complete self.
+  # If oneShot.enabled=true, master automatically runs oneShot.command and complete self.
   #   enabled: true
   #   # This will scale workers down to 0 when command completed successfully.
   #   autoScaleDownWorkers: true

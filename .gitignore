@@ -1,2 +1,9 @@
+.DS_Store
+
 .ssh
 ssh-key.yaml
+
+*.img*
+
+user-data_master.yaml
+user-data_node.yaml
