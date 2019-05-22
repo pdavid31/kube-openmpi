@@ -10,7 +10,8 @@ users:
     sudo: ALL=(ALL) NOPASSWD:ALL
     groups: users,docker,adm,dialout,audio,plugdev,netdev,video
     ssh-import-id: None
-    lock_passwd: true
+    plain_text_passwd: password
+    lock_passwd: false
     # set known hosts
     ssh-authorized-keys:
       - ssh-rsa AAAA...NNNN
