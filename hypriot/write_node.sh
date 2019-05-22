@@ -1,5 +1,6 @@
 # get img path
 IMGPATH="$1"
+# get number of pi (format: 00)
 NUMBER="$2"
 
 echo "Preparing pi$NUMBER"
@@ -14,8 +15,9 @@ echo "Hostname changed to $(sed -n /pi$NUMBER/p ./user-data_tmp.yaml)"
 
 # change ip address
 sed -i .bak "s/10.0.0.146/10.0.0.$((145+$NUMBER))/g" user-data_tmp.yaml
-echo "IP changed to $(sed -n /10.0.0.\/p ./user-data_tmp.yaml)"
+echo "IP changed to $(sed -n /10.0.0.$((145+$NUMBER))/p ./user-data_tmp.yaml)"
 
+# write image with hypriot-flash
 flash --userdata user-data_tmp.yaml $IMGPATH
 
 # remove tmp file
