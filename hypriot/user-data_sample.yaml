@@ -11,6 +11,7 @@ users:
     groups: users,docker,adm,dialout,audio,plugdev,netdev,video
     ssh-import-id: None
     plain_text_passwd: password
+    # passwd: hashed password
     lock_passwd: false
     # set known hosts
     ssh-authorized-keys:
